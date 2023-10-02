@@ -1,0 +1,90 @@
+*{
+  font-size: 20px;
+  box-sizing: border-box;
+}
+  body{
+color:#000000;
+background-color:	#5dac30;
+}
+
+nav{
+background-color: #467619;
+border: 6px solid #000000;
+}
+nav div {
+border: 2px solid #000000;
+background-color: rgba(30, 212, 79, 0.47);
+}
+ul{
+  list-style-type: disc;  
+}
+
+
+a{
+  display: block;
+  color: #000000;  
+}
+
+a:hover{
+  text-decoration: overline;
+}
+.table{
+  border-collapse: collapse;
+  border: 3px solid black;
+  background-color: #72df33;
+  
+}
+th, td{
+  border: 1px solid black;
+}
+.form{
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+input, select, textarea{
+  border: 1px solid#e5e5e5;
+}
+input[type=submit],[type=radio], [type=date]{
+  cursor: pointer;
+}
+input[type=submit]{
+  background-color: rgb(255, 255, 255);
+}
+
+header{
+  background-color: rgb(99, 194, 48);
+border-bottom: 5px solid #000000;
+}
+.slist {
+background-color: rgb(140, 239, 232);
+border: 5px solid #000000;
+}
+
+img {
+  border: 6px solid #000000;
+  border-radius: 16px;
+}
+
+
+.circle-image{
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 6px solid #000000;
+  margin-top:0px;
+  margin-left:-230px;
+}
+
+tr:nth-child(even){
+  background-color: #f4511f;
+}
+.footer{
+  border: 6px solid #000000;
+  background-color: rgb(153, 255, 0);
+}
+.link {
+background-color: rgb(70, 174, 77);
+border: 5px solid #000000;
+}

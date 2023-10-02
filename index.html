@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Сайт тестовый</title>
+    <link rel="stylesheet" href="C:\Users\gavri\Desktop\ДЗ 4\css\style.css">
+    <style>#main-aside-wrapper {
+      flex-direction: row;
+      display: flex;
+    }
+    #main-aside-wrapper main, #main-aside-wrapper aside {
+      background-color: #ddd;
+      margin: 10px;
+      padding: 10px;
+    }
+    #main-aside-wrapper aside {
+      flex: 1;
+      order: 1;
+    }
+    #main-aside-wrapper main {
+      flex: 3;
+      order: 2;
+    }
+    @media screen and (min-width: 800px) {
+    #main-aside-wrapper {
+    flex-direction: row;
+      }
+    } 
+    
+    </style>
+  </head>
+
+  <body>
+    <nav class="page-nav">
+        <ul>
+            <li><a href="#link list">Список ссылок</a></li>
+            <li><a href="#form">Форма </a></li>
+            <li><a href="#table">Таблица</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <div style="width:960px; padding: 10px; height:120px; margin: 0 auto;">
+          <span class="circle-image">
+              <img style="float:left; margin-left:-5px; margin-top:-5px; width:100px; height:100px;" src="image.png" alt="">
+           </span>
+
+            <div style=" padding:50px; margin-top:-100px; margin-left: -120px; font-size:35px">Сайт Тестовый</div>
+            </div>  
+    </header>
+    <section class="link" id="link">
+    <ul class="link list">
+        <li><a href=http://www.kubsu.ru> <b>Абсолютная гиперссылка на главную страницу сайта kubsu.ru</b></a></li>
+        <br />
+        <li><a href=https://www.kubsu.ru> <b>Абсолютная ссылка на главную страницу сайта kubsu.ru в протоколе https</b></a></li>
+        <br />
+        <li><a href=http://www.kubsu.ru><img src=flower.jpg width=200 height=200></a></li>
+        <br />
+        <li><a href="/pages/page"><b>Сокрашённая ссылка на внутреннюю страницу</b></a></li>
+        <br />
+        <li><a href="/"><b>Сокращённая ссылка на главную страницу</b></a></li>
+        <br />
+        <li><a href="#top"><b>Ссылка на фрагмент текущей страницы</b></a></li>
+        <br />
+        <li><a href=https://www.youtube.com/@thesuperframe/?parameter1=p1&parameter2=p2&parametr3=p3/> <b>Ссылка с тремя параметрами</b></a></li>
+        <br />
+        <li>Ссылка с параметром id в URL</li>
+        <br />
+        <li><a href="page"><b>Относительная на страницу в текущем каталоге</b></a></li>
+        <br />
+        <li><a href="./about/page"><b>Относительная ссылка на страницу в каталоге about</b></a></li>
+        <br />
+        <li><a href="../page"><b>Относительная ссылка на страницу в каталоге уровнем выше текущего</b>b</a></li>
+        <br />
+        <li><a href="../../page"><b>Относительная ссылка на страницу двумя уровнями выше текущего</b></a></li>
+        <br />
+        <li> <b>Контекстная <a href="https://example.com"><i>ссылка</i></a> в тексте абзаца</b></li>
+        <br/>
+        <li><a href=https://www.youtube.com/@thesuperframe#anchor><b>Ссылка на фрагмент стороннего сайта</b></a></li>
+        <br/>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Stan_the_Trex_at_Manchester_Museum.jpg" width="300" height="500" usemap="#mymap">
+        <map name="mymap"><area shape="rect" coords="40,25,90,150" href="https://memepedia.ru/wp-content/uploads/2021/05/amogus.png"><area shape="circle" coords="170, 190, 35" href="https://cdn.discordapp.com/attachments/355154727585185792/1151920901319835669/masiakprev.png"></map>
+        </li>
+        <br/>
+        <li><a href><b>Ссылка с пустым href</b></a></li>
+        <br/>
+        <li><a><b>Ссылка без href</b></a></li>
+        <br/>
+        <li><a href="https://www.youtube.com/@thesuperframe" rel="notfollow"><b>Ссылка на которую запрещён переход поисковикам</b></a></li>
+        <br/>
+        <li><a href="https://www.youtube.com/@thesuperframe" rel="notfollow"><!--noindex-->
+          <b>Ссылка запрещенная для индексации поисковиками</b>
+          <!--noindex--></a></li>
+        <br/>
+        <li><b>Нумерованный список ссылок с подписями title</b>
+        <ol>
+          <li>
+            <a href="#link" title="Маркированный список ссылок">Маркированный список ссылок</a>
+          </li>
+          <li>
+            <a href="#table" title="Таблица">Таблица</a>
+          </li>
+          <li>
+            <a href="#form" title="Форма">Форма</a>
+          </li>
+        </ol>
+        </li>
+        <br/>
+        <li><a href="ftp://user:3354@example.com/files.file.html"><b>Ссылка на файл на сервере FTP с авторизацией</b></a></li>
+        <br/>
+       </ul>
+       <table class="table" id="table">
+        <caption>
+            Таблица
+        </caption>
+        <tbody col span="3">
+            <tr>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+          </tr>
+          <tr >
+            <td colspan="2">Ячейка 11 объединенная с 12</td>
+            <td>Ячейка 13</td>
+          </tr>
+          <tr class="tab" >
+            <td>Ячейка 21</td>
+            <td>Ячейка 22</td>
+            <td>Ячейка 23</td>
+          </tr>
+          <tr class="tab" >
+            <td>Ячейка 31</td>
+            <td>Ячейка 32</td>
+            <td>Ячейка 33</td>
+          </tr>
+          <tr >
+            <td>Ячейка 41</td>
+            <td>Ячейка 42</td>
+            <td rowspan="2">Ячейка 43 объединённая с 53</td>
+          </tr>
+          <tr class="tab">
+            <td colspan="2" >Ячейка 51 объединённая с 52</td>
+          </tr>
+        </tbody>
+    </table>
+       <b>Форма</b>
+       <form action="https://www.example.com" method="POST" id="form">
+        <label>
+          Фамилия:<br>
+          <input name="field-name-1" placeholder="Гаврилов" type="surname">
+       </label><br>
+        <label>
+          Имя:<br>
+         <input name="field-name-1" placeholder="Никита" type="name">
+       </label><br>
+       <label>
+          Отчество:<br>
+          <input name="field-name-1" placeholder="Александрович" type="patronus">
+       </label><br>
+
+      <label>
+            Телефон:<br>
+            <input name="field-tel" placeholder="88005553535" type="tel">
+         </label><br>
+         <label>
+            Email:<br>
+            <input name="field-email" placeholder="2015anonimdogememe@gmail.com" type="email">
+         </label><br>
+            <label>
+            Дата рождения:<br>
+            <input name="field-date" value="2004-12-02" type="date">
+         </label><br>Любимый язак программирования:<br>
+         <label>
+             <input type="radio" name="radio-group-1" value="C++">
+             C++
+         </label>
+         <label>
+             <input type="radio" name="radio-group-1" value="Java">
+             Java
+         </label>
+         <label>
+             <input type="radio" name="radio-group-1" value="Python">
+             Python
+         </label>
+         <label>
+             <input type="radio"  name="radio-group-1" value="Pascal">
+             Pascal
+         </label>
+         <label>
+           <input type="radio" checked="checked" name="radio-group-1" value="Scala">
+           Scala
+       </label>
+         <br>
+              Пол:<br>
+              <label>
+                  <input type="radio" name="radio-group-2" value="Мужской">
+                  Мужской
+              </label>
+              <label>
+                  <input type="radio" name="radio-group-2" value="Женский">
+                  Женский
+              </label>
+              <label>
+                  <input type="radio" name="radio-group-2" value="Неопределённый">
+                  Неопределённый
+              </label>
+              <label>
+                <input type="radio" name="radio-group-2" value="Бизнес">
+                Бизнес
+              </label><br>
+              
+              <label>
+                Биография:<br>
+                <textarea > </textarea>
+                 
+                 
+              </label><br>
+              С контрактом ознакомлен(а):<br>
+              <label>
+                  <input type="checkbox" checked="checked" name="check-1">
+              </label><br>
+              <button name="save" value="Сохранение">Сохранить</button>
+          </form>
+        </div>
+        <footer class="footer" id="footer">
+          <div class="footer__inner">
+              <span>© Никита Гаврилов 2023</span>
+          </div>
+      </footer>
+  </body>
+</html>
