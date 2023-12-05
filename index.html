@@ -2,35 +2,38 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">  
   <link rel="stylesheet" href="/Task4/css/style.css">
   <title>Адаптивная вёрстка с помощью Bootstrap</title>
 </head>
 <body>
   <div class="container">
-    <div class="col d-flex justify-content-center">
-      <div class="col-md-9 order-md-1">
-        <header>
-          <div style="width:960px; padding: 10px; height:120px; margin-left: 0%;">
-            <img style="float:left; margin:10px; width:100px; height:100px;" src="image.png" alt="">
-         
-             <div style=" padding:50px;">Сайт Тестовый</div>
-             <div class="page-nav">
-                <ul>
-                  <li><a href="#links">Список ссылок</a></li>
-                  <li><a href="#table">Таблица</a></li>
-                  <li><a href="#form">Форма </a></li>
+      <div class="col-md-12 mx-auto">
+        <div class="col d-flex justify-content-center">
+        <header class="header">
+          <div class="row">
+            <div class="col-md-3">
+              <img style="float:left; margin:10px; width:100px; height:100px;" src="image.png" alt="">
+            </div>
+            <div class="col-md-12">
+              <h1>Сайт Тестовый</h1>
+              <nav>
+                <ul class="page-nav">
+                  <li class="nav-item"><a href="#links" class="nav-link">Список ссылок</a></li>
+                  <li class="nav-item"><a href="#table" class="nav-link">Таблица</a></li>
+                  <li class="nav-item"><a href="#form" class="nav-link">Форма</a></li>
                 </ul>
+              </nav>
             </div>
           </div>
+          </header>
         </header>
+        </div>
       </div>
-    </div>
     <div class="row">
-      <div class="col-md-9 order-md-3">
-        <div class="col d-flex justify-content-center">
-          <table class="table">
+      <div class="col-md-12 order-md-3">
+          <table class="table-responsive">
             <caption>
               Таблица
             </caption>
@@ -65,7 +68,6 @@
             </tbody>
           </table>
         </div>
-      </div>
       <div class="col d-flex justify-content-center">
         <div class="col-md-9 order-md-2">
           <ul>
@@ -160,7 +162,7 @@
               <input name="field-date" value="2004-12-02" type="date">
            </label>
            <br><b>Любимый язык программирования:</b><br>
-           <p><select multiple>
+           <p><select multiple class="select">
             <option disabled>Выберите любимый язык программирования</option>
             <option value="C++">C++</option>
             <option selected value="Java">Java</option>
@@ -198,6 +200,7 @@
                 </label><br>
                 <button name="save" value="Сохранение">Сохранить</button>
           </form>
+        </div>
       </div>
     </div>
   </div>
