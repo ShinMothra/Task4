@@ -10,39 +10,46 @@ body{
   background-color:	#5dac30;
 }
 
-.page-nav {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border: 6px solid #0a3e0e;
-  background-color: rgba(30, 212, 79, 0.47);
-  text-align: center;
-  transform: translate(-28svh);
+header{
+  justify-content: center;
+  width:100%;
+  .page-nav {
+    display: flex;
+    flex-direction: column; /* По умолчанию колонкой */
+    width: 100%;
+    border: 6px solid #0a3e0e;
+    background-color: rgba(30, 212, 79, 0.47);
+    text-align: center;
+  }
 }
 
 .page-nav li {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 5px 30px 5px 25px;
-  width: 100%;
+  width: 90%;
   background-color: #467619;
   padding: 10px;
   border: 2px solid #000000;
 }
 
-.table{
+.table-responsive{
   text-align: center;
   border: 5px solid #0a3e0e;
   background-color:rgba(115, 255, 93, 0.47);
   width:100%;
 }
 
-table{
-  text-align: center;
+.table{
+  width:100%
+}
+
+#form{
   width:100%;
-  border-collapse: collapse;
-  background-color:rgba(115, 255, 93, 0.47);
-    
+  .select{
+    width:100%;
+  }
 }
 
 .container {
@@ -54,7 +61,6 @@ tr:nth-child(even){
 }
 
 .row  {
-  margin-top: 15%;
   border: 5px solid #0a3e0e;
   background-color:rgba(115, 255, 93, 0.47);
   display: flex;
@@ -72,13 +78,25 @@ a:hover{
   text-decoration:line-through;
 }
 
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align:left;
+  width: 100%; /* Занимает всю доступную ширину */
+}
 
 /* Применяем стили для широких экранов */
 @media screen and (orientation:landscape) {
-  .page-nav {
-    display: flex;
-    flex-direction: row; /* Отображение в виде строки */
-    justify-content: center; 
+  header{
+    width:960px;
+    .page-nav {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      border: 6px solid #0a3e0e;
+      background-color: rgba(30, 212, 79, 0.47);
+      text-align: center;
+    }
   }
 
   .page-nav li {
@@ -87,15 +105,13 @@ a:hover{
   }
 
   .container {
-    width: 900px;
+    width: 960px; /* Максимальная ширина контейнера 900 пикселей */
   }
   *{
-    font-size: 20px;
+    font-size: 20px; /* Размер шрифта для широких экранов */
   }
-}
-.footer {
-  background-color: #f5f5f5;
-  padding: 20px;
-  text-align:left;
-  width: 100%; /* Занимает всю доступную ширину */
+  .table-responsive{
+    width: 850px;
+    justify-content: center;
+  }
 }
